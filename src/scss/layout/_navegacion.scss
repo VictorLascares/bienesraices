@@ -1,3 +1,17 @@
+.dark-mode {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    .dark-mode-boton {
+        max-width: 3rem;
+        filter: invert(100%);
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
 .barra {
     display: flex;
     flex-direction: column;
@@ -12,7 +26,8 @@
 .navegacion {
     visibility: hidden;
     opacity: 0;
-    transition: visibility .3s ease-in-out, opacity .5s linear;
+    height: 0;
+    transition: visibility .3s ease-in-out, opacity .5s linear, height .5s linear;
     @include tablet {
         display: flex;
         gap: 2rem;
@@ -48,4 +63,5 @@
 .mostrar {
     visibility: visible;
     opacity: 1;
+    height: auto;
 }
